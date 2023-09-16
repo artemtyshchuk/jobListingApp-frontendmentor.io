@@ -1,0 +1,24 @@
+.filterPanel {
+  margin-top: -32px;
+}
+
+.filterPAnelWrapper {
+  padding: 12px 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filterPanelLink {
+  color: var(--grey-800);
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: var(--fw-bold);
+  padding: 8px;
+}
+
+.filterPanelLink:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
