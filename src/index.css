@@ -113,22 +113,3 @@ body {
 .card--featured {
   border-left-color: var(--primary);
 }
-
-@media (min-width: 1024px) {
-  .job-position {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .job-position-info {
-    padding: 0;
-    margin-bottom: 0;
-    border-bottom: 0px;
-  }
-
-  .job-position-avatar {
-    position: static;
-    flex-shrink: 0;
-    width: 100px;
-    height: 100px;
-  }
-}

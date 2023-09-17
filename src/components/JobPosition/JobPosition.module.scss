@@ -1,0 +1,94 @@
+.jobPosition {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.jobPositionInfo {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  padding-top: 12px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--grey-800);
+}
+
+.jobPositionAvatar {
+  top: -50px;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+.jobPositionBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.jobPositionBody .badge {
+  font-size: 10px;
+}
+
+.jobPositionCompany {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.jobPositionCompany h3 {
+  margin: 0;
+  font-style: var(--fs-normal);
+  color: var(--primary);
+  font-weight: var(--fw-bold);
+}
+
+.jobPositionTitle {
+  margin-top: 16px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.jobPositionTitle:hover {
+  color: var(--primary);
+}
+
+.jobPositionMeta {
+  color: var(--grey-800);
+  position: relative;
+}
+
+.jobPositionMeta:not(:last-child) {
+  padding-right: 8px;
+}
+
+.jobPositionMeta:not(:last-child):after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: 6px;
+  width: 4px;
+  height: 4px;
+  background-color: var(--grey-800);
+  border-radius: var(--radii-full);
+}
+
+@media (min-width: 1024px) {
+  .jobPosition {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .jobPositionInfo {
+    padding: 0;
+    margin-bottom: 0;
+    border-bottom: 0px;
+  }
+
+  .jobPositionAvatar {
+    position: static;
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+  }
+}

@@ -1,5 +1,6 @@
 import { Header } from "./components/Header/Header";
 import { FilterPanel } from "./components/FilterPanel/FilterPanel";
+import { JobList } from "./components/JobList/JobList";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <Header />
       <div className="container">
         <FilterPanel />
+        <JobList />
       </div>
     </>
   );
