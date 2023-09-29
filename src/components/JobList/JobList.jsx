@@ -1,13 +1,12 @@
 import styles from "./JobList.module.scss";
 import { useSelector, useDispatch } from "react-redux";
-import { selectVisiblePositions } from "../../store/positions/position-selectors";
+import { addFilter } from "../../features/filters/filter-slice";
+import { selectVisiblePositions } from "../../features/positions/position-slice";
 import { JobPosition } from "../JobPosition/JobPosition";
-import { addFilter } from "../../store/filters/filters-actions";
-import { selectFilter } from "../../store/filters/filters-selector";
 
 export const JobList = () => {
   const dispatch = useDispatch();
-  const currentFilters = useSelector(selectFilter);
+  const currentFilters = useSelector((state) => state.filters);
   const positions = useSelector((state) =>
     selectVisiblePositions(state, currentFilters)
   );

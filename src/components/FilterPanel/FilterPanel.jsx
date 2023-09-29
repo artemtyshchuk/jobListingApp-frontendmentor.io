@@ -4,12 +4,11 @@ import { Card } from "../../UI/Card";
 import { Stack } from "../../UI/Stack";
 import { Badge } from "../../UI/Badge";
 
-import { selectFilter } from "../../store/filters/filters-selector";
-import { removeFilter, clearFilter } from "../../store/filters/filters-actions";
+import { removeFilter, clearFilter } from "../../features/filters/filter-slice";
 
 export const FilterPanel = () => {
   const dispatch = useDispatch();
-  const currentFilters = useSelector(selectFilter);
+  const currentFilters = useSelector((state) => state.filters);
 
   if (currentFilters.length === 0) {
     return null;

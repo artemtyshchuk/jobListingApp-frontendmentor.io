@@ -5,7 +5,7 @@ import { Header } from "./components/Header/Header";
 import { FilterPanel } from "./components/FilterPanel/FilterPanel";
 import { JobList } from "./components/JobList/JobList";
 
-import { addPositions } from "./store/positions/position-actions";
+import { addPositions } from "./features/positions/position-slice";
 import data from "./mock/data.json";
 
 function App() {
